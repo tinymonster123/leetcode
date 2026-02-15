@@ -26,16 +26,16 @@ function lengthOfLongestSubstring(s: string): number {
     let maxLen: number = 0
     let left = 0
 
-    for(let right = 0;right < arr.length;right++) {
+    for (let right = 0; right < arr.length; right++) {
         const ch = arr[right]
-        while(window.has(ch)){
+        while (window.has(ch)) {
             window.delete(arr[left])
             left++
         }
 
         window.add(ch)
 
-        maxLen = Math.max(maxLen,right - left + 1)
+        maxLen = Math.max(maxLen, right - left + 1)
     }
     return maxLen
 };
