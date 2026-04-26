@@ -1,3 +1,4 @@
+// 状态转移方程：dp[i] = dp[i - 1] + dp[i - 2]
 function climbStairs(n: number): number {
     if (n <= 2) return n
     const dp: number[] = Array(n + 1).fill(0)

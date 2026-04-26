@@ -1,3 +1,4 @@
+// 状态转移方程：dp[i] = Math.max(dp[i - 1],dp[i - 2] + nums[i - 1])
 function rob(nums: number[]): number {
     if (nums.length === 1) return nums[0]
     const dp: number[] = Array(nums.length).fill(0)

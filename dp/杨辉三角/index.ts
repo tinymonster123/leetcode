@@ -1,3 +1,4 @@
+// 状态转移方程：dp[i][j] = dp[i - 1][j] + dp[i - 1][j - 1]
 function generate(numRows: number): number[][] {
     const dp: number[][] = Array(numRows + 1)
     for (let i = 1; i <= numRows; i++) {
