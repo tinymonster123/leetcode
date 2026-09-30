@@ -1,7 +1,7 @@
 // 状态转移方程：dp[i] = Math.max(dp[i - 1],dp[i - 2] + nums[i - 1])
 function rob(nums: number[]): number {
     if (nums.length === 1) return nums[0]
-    const dp: number[] = Array(nums.length).fill(0)
+    const dp: number[] = Array(nums.length + 1).fill(0)
     dp[1] = nums[0]
     for (let i = 1; i <= nums.length; i++) {
         // nums 中的索引比 dp 中少 1
